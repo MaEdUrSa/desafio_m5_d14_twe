@@ -27,9 +27,10 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
 
-    respond_to do |format|
+        respond_to do |format|
       if @tweet.save
-        format.html { redirect_to @tweet, notice: "Tweet ha sido creado satisfactoriamente", class:"d-flex justify-content-between" }
+        format.html { redirect_to @tweet, notice: "Tweet ha sido creado satisfactoriamente", 
+        class:"col  border-white " }
         format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -42,7 +43,8 @@ class TweetsController < ApplicationController
   def update
     respond_to do |format|
       if @tweet.update(tweet_params)
-        format.html { redirect_to @tweet, notice: "Tweet ha sido modificado satisfactoriamente", class:"text-center" }
+        format.html { redirect_to @tweet, notice: "Tweet ha sido modificado satisfactoriamente", 
+        class:"text-center bg-dange" }
         format.json { render :show, status: :ok, location: @tweet }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -56,7 +58,8 @@ class TweetsController < ApplicationController
     @tweet.destroy!
 
     respond_to do |format|
-      format.html { redirect_to tweets_path, status: :see_other, notice: "Tweet ha sido eliminado." }
+      format.html { redirect_to tweets_path, status: :see_other, notice: "Tweet ha sido eliminado.", 
+      class:"text-center bg-dange" }
       format.json { head :no_content }
     end
   end

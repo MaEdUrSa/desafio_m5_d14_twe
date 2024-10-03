@@ -2,18 +2,19 @@
 
 <% content_for :title, "Tweets" %>
 
-<div class="my-2 col-12">
-    <%= form_with url: tweets_path, method: :get do |form| %>
-    <%= form.text_field :query_text, placeholder: "Buscador", value: params[:query_text]%>
+       <div class="my-2 col-12 d-flex justify-content-between ">
+          <%= form_with url: tweets_path, method: :get do |form| %>
+          <%= form.text_field :query_text, placeholder: "Buscador", value: params[:query_text]%>
 
-     <%= form.submit "buscar" %>
-      <%end%>
+          <%= form.submit "Buscar" %>
+            <%end%>
 
-    <div class="d-flex justify-content-end">
-        <%== pagy_bootstrap_nav(@pagy)%>
+            <div class="d-flex justify-content-end">
+              <%== pagy_bootstrap_nav(@pagy)%>
+            </div>
       </div>
-</div>
-<table class="table table-striped mb-5">
+
+<table class="table table-striped mb-3">
 
   <thead>
     <tr>
@@ -24,16 +25,16 @@
     </tr>
   </thead>
 
-    <tbody>
+    <tbody class= "bg-white  border rounded-4">
         <% @tweets.each do |tweet| %>
           <tr>
               <td><%= tweet.id %></td>
               <td><%= tweet.description %></td>
                <td><%= tweet.username %></td>
-               <td class="d-flex justify-content-between">
-                  <%= link_to "Ver", tweet, class: "btn btn-sm btn-secondary"  %> 
+               <td class="d-flex justify-content-between ">
+                  <%= link_to "Ver  ", tweet, class: "btn btn-sm btn-success px-2"  %> 
                   <%= link_to "Editar", edit_tweet_path(tweet), class: "btn btn-sm btn-secondary"  %> 
-                  <%= button_to "Eliminar", tweet, method: :delete,  class: "btn btn-sm btn-secondary"  %> 
+                  <%= button_to "Eliminar", tweet, method: :delete,  class: "btn btn-sm btn-danger"  %> 
                </td>
           </tr>
         <% end %>
@@ -50,10 +51,13 @@
     <%# </p> %>
   <%# <% end  %>
 <%# </div> %>
-   <div class="d-flex justify-content-end"  >
-      <%== pagy_bootstrap_nav(@pagy)%>
+
+  <div class="my-3 col-12 d-flex justify-content-between ">
+    <%= link_to "New tweet", new_tweet_path, class:"btn btn-primary" %>
+    
+    <div class=""  >
+        <%== pagy_bootstrap_nav(@pagy)%>
     </div>
+    
 
-
-<%= link_to "New tweet", new_tweet_path, class:"btn btn-primary" %>
-
+  </div> 

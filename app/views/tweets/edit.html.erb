@@ -2,11 +2,13 @@
 
 <h3 class="my-5 text-center">Editar tweet  <%= @tweet.id %></h3>
 
-<%= render "form", tweet: @tweet %>
+  <div class="col border ">
+    <%= render "form", tweet: @tweet %>
+  </div>
 
-<br>
 
-<div class = "text-center">
-  <%= link_to "Ver tweet", @tweet, class: "btn btn-sm btn-secondary px-4" %>
+
+<div class = "d-flex justify-content-evenly  ">
+  <%= link_to "Ver tweet", @tweet, class: "btn btn-sm btn-success px-4" %>
   <%= link_to "Retornar a tweets", tweets_path , class: "btn btn-sm btn-secondary" %>
 </div>
