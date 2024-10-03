@@ -10,18 +10,19 @@
       </ul>
     </div>
   <% end %>
+  <div class = "row py-3  text-center">
+      <div class = "py-3">
+        <%= form.label :description, style: "display: line" %>
+        <%= form.text_field :description %>
+      <%# </div> %>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+      <%# <div> %>
+        <%= form.label :username, style: "display: line" %>
+        <%= form.text_field :username %>
+      </div>
   </div>
 
-  <div>
-    <%= form.label :username, style: "display: block" %>
-    <%= form.text_field :username %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class = "bt-3 text-center">
+    <%= form.submit "Crear / Actualizar" ,  class:  "btn btn-sm btn-secondary" %>
   </div>
 <% end %>
