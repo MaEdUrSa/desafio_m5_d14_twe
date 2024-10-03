@@ -2,7 +2,7 @@
 
 <% content_for :title, "Tweets" %>
 
-<div class="my-3">
+<div class="my-2 col-12">
     <%= form_with url: tweets_path, method: :get do |form| %>
     <%= form.text_field :query_text, placeholder: "Buscador", value: params[:query_text]%>
 

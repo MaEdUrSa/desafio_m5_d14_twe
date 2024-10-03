@@ -18,10 +18,34 @@
   </head>
 
   <body>
-    <h1 class="my-2 text-center">Tweets</h1>
-  <div class = "container">
-    <%= yield %>
+<%# 
+         <img src="https://tse1.mm.bing.net/th?id=OIP.9gxQQcv4k1RJ9mCP6qOPLwHaEK&pid=Api&P=0&h=180" class width= "" 
+          class="" alt="imagen spea"> 
+    <div class=" my-2 "> 
+           <h1 class = "d-flex justify-content-Center"> 
+           Tweets 
+          </h1>
+    </div> %>
+
+  <div class=" container card mb-0" style="">
+  <div class="row text-bg-primary ">
+    <div class="col-md-4">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.9gxQQcv4k1RJ9mCP6qOPLwHaEK&pid=Api&P=0&h=180" 
+      class="img-fluid rounded-start " alt="imagen spea">
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="card-body ">
+        <h1 class="card-title ">Tweets </h1>
+      </div>
+    </div>
   </div>
+</div>
+
+
+      <div class = "container">
+         <%= yield %>
+      </div>
 
 
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
