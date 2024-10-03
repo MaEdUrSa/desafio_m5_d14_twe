@@ -2,9 +2,17 @@
 
 <% content_for :title, "Tweets" %>
 
-<h1 class="my-5 text-center">Tweets</h1>
+<div class="my-3">
+    <%= form_with url: tweets_path, method: :get do |form| %>
+    <%= form.text_field :query_text, placeholder: "Buscador", value: params[:query_text]%>
 
+     <%= form.submit "buscar" %>
+      <%end%>
 
+    <div class="d-flex justify-content-end">
+        <%== pagy_bootstrap_nav(@pagy)%>
+      </div>
+</div>
 <table class="table table-striped mb-5">
 
   <thead>
@@ -42,5 +50,10 @@
     <%# </p> %>
   <%# <% end  %>
 <%# </div> %>
+   <div class="d-flex justify-content-end"  >
+      <%== pagy_bootstrap_nav(@pagy)%>
+    </div>
+
 
 <%= link_to "New tweet", new_tweet_path, class:"btn btn-primary" %>
+
