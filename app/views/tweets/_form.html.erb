@@ -11,18 +11,18 @@
     </div>
   <% end %>
   
-  <div class = "row py-3  text-center">    
-      
-      <div class = "py-3">
-        <%= form.label :description, style: "display: line" %>
-        <%= form.text_field :description %>
-      <%# </div> %>
+    <div class = "container py-4  text-center text-white">    
 
-      <%# <div> %>
-        <%= form.label :username, style: "display: line" %>
-        <%= form.text_field :username %>
-      </div>
-  </div>
+          <div class="card bg-info border rounded-2 ">
+              <p class="card-text bg-secondary "  >
+                  <%= form.label :Descripcion,  class:"form-label" %>
+                  <%= form.text_field :description,  class:"form-control height: 100px"  %>
+
+                  <%= form.label :Username, class:"form-label" %>
+                  <%= form.text_field :username,  class:"form-control"  %>
+              </p>
+          </div>
+    </div>
 
   <div class = "bt-3 text-center">
     <%= form.submit "Crear / Actualizar" ,  class:  "btn btn-sm btn-primary" %>

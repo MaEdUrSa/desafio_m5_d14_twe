@@ -1,0 +1,23 @@
+/* body {
+    background-image: url(https://cdn.pixabay.com/photo/2017/08/23/11/30/twitter-2672572_1280.jpg);
+    background-image:  url(https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/twitter_logo_blue.png.twimg.768.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+} */
+
+/* 
+.body {
+    font-family: 'Open Sans', sans-serif;
+} */
+
+#detalle{
+    background-image: url(https://i.blogs.es/dc18bb/twitter-alexander-shatov-k1xf2d7jwus-unsplash/1366_2000.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* text-align: center; */
+    padding: 60px 120px 60px 200px;
+
+}

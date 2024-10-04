@@ -2,22 +2,25 @@
 
 <% content_for :title, "Tweets" %>
 
-       <div class="my-2 col-12 d-flex justify-content-between ">
-          <%= form_with url: tweets_path, method: :get do |form| %>
-          <%= form.text_field :query_text, placeholder: "Buscador", value: params[:query_text]%>
+       <div class="my-2 col-12 d-flex justify-content-between border rounded-4 ">
 
-          <%= form.submit "Buscar" %>
+            <%= form_with url: tweets_path, method: :get do |form| %>
+            <%= form.text_field :query_text, placeholder: "Buscador", value: params[:query_text], class: "border rounded-4 px-5"%>
+
+              <div class= "btn btn-secondary  ">
+                  <%= form.submit "Buscar", class:"btn btn-primary px-4" %>
+              </div>
             <%end%>
 
-            <div class="d-flex justify-content-end">
-              <%== pagy_bootstrap_nav(@pagy)%>
+            <div class="d-flex justify-content-end px-5 ">
+                <%== pagy_bootstrap_nav(@pagy)%>
             </div>
       </div>
 
 <table class="table table-striped mb-3">
 
-  <thead>
-    <tr>
+  <thead >
+    <tr  class= "bg-info border rounded-2  ">
       <th>ID</th>
       <th>Description</th>
       <th>UserName</th>
@@ -52,11 +55,13 @@
   <%# <% end  %>
 <%# </div> %>
 
-  <div class="my-3 col-12 d-flex justify-content-between ">
-    <%= link_to "New tweet", new_tweet_path, class:"btn btn-primary" %>
-    
-    <div class=""  >
-        <%== pagy_bootstrap_nav(@pagy)%>
+  <div class="my-3 col-12 d-flex justify-content-between  border rounded-2">
+    <div class="btn  btn-secondary px-4">
+        <%= link_to "New tweet", new_tweet_path, class:"btn btn-primary" %>
+    </div>
+
+    <div class = " d-flex justify-content-between px-5"  >
+        <%== pagy_bootstrap_nav(@pagy) %>
     </div>
     
 

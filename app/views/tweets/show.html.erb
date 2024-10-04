@@ -1,11 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: red " class = "text-center "><%= notice %></p>
 
-<h3 class="my-5 text-center ">Revisar el tweet  <%= @tweet.id %>  </h3>
+<h3 class="my-5 text-center text-white">Revisar el tweet  <%= @tweet.id %>  </h3>
 
 
 
-<div class = "row py-3  text-center col border  ">
-    <%= render @tweet %>
+<div class = "row  text-center col border rounded-4  ">
+    <%= render @tweet , class: "text-white"%>
 </div>
 
         <div class = "d-flex justify-content-evenly  ">

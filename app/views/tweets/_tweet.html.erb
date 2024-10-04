@@ -1,12 +1,33 @@
 <div id="<%= dom_id tweet %>">
-  <p>
-    <strong>Description:</strong>
-    <%= tweet.description %>
-  </p>
 
-  <p>
-    <strong>Username:</strong>
-    <%= tweet.username %>
-  </p>
+
+        <%# <p class = "text-white"> %>
+          <%# <strong>Description dddd:</strong> %>
+          <%# <%= tweet.description %>
+        <%# </p> %>
+
+        <%# <p class = "text-white"> %>
+          <%# <strong>Username:</strong> %>
+          <%# <%= tweet.username %> 
+        <%# </p> %>
+
+
+    <div class = "container py-4  text-center text-white ">     
+
+          <div class="card border rounded-2">
+              <strong class="bg-secondary d-flex justify-content-center"> Descripcion
+              </strong>
+
+              <div class = "text-black  d-flex justify-content-left"> 
+                  <%= tweet.description %>
+              </div>
+
+              <strong class="bg-secondary">Username:</strong>
+              <div class = "text-black d-flex justify-content-left"> 
+                <%= tweet.username %>
+              </div>
+          </div>
+    </div>
+
 
 </div>
